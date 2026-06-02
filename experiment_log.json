@@ -1,0 +1,98 @@
+{
+  "experiment": "ESG Message Triage",
+  "date": "2026",
+  "model_llm": "mistralai/Mistral-7B-Instruct-v0.3",
+  "model_baseline": "facebook/bart-large-mnli (zero-shot)",
+  "messages_tested": 5,
+  "llm_accuracy": "0%",
+  "baseline_accuracy": "100%",
+  "llm_results": [
+    {
+      "error": "HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7983141ee5d0>: Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)\"))",
+      "message_id": "MSG001",
+      "expected_category": "Environmental"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x798315e01580>: Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)\"))",
+      "message_id": "MSG002",
+      "expected_category": "Governance"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x79831409b320>: Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)\"))",
+      "message_id": "MSG003",
+      "expected_category": "Social"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7983140cc2c0>: Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)\"))",
+      "message_id": "MSG004",
+      "expected_category": "Environmental"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7983140ccb60>: Failed to resolve 'api-inference.huggingface.co' ([Errno -2] Name or service not known)\"))",
+      "message_id": "MSG005",
+      "expected_category": "Social"
+    }
+  ],
+  "baseline_results": [
+    {
+      "message_id": "MSG001",
+      "predicted_category": "Environmental",
+      "confidence": 0.421,
+      "all_scores": {
+        "Environmental": 0.421,
+        "Social": 0.391,
+        "Governance": 0.188
+      },
+      "severity_rule_based": "Critical",
+      "expected_category": "Environmental"
+    },
+    {
+      "message_id": "MSG002",
+      "predicted_category": "Governance",
+      "confidence": 0.586,
+      "all_scores": {
+        "Governance": 0.586,
+        "Social": 0.34,
+        "Environmental": 0.073
+      },
+      "severity_rule_based": "Medium",
+      "expected_category": "Governance"
+    },
+    {
+      "message_id": "MSG003",
+      "predicted_category": "Social",
+      "confidence": 0.589,
+      "all_scores": {
+        "Social": 0.589,
+        "Governance": 0.304,
+        "Environmental": 0.107
+      },
+      "severity_rule_based": "Critical",
+      "expected_category": "Social"
+    },
+    {
+      "message_id": "MSG004",
+      "predicted_category": "Environmental",
+      "confidence": 0.452,
+      "all_scores": {
+        "Environmental": 0.452,
+        "Social": 0.424,
+        "Governance": 0.124
+      },
+      "severity_rule_based": "Medium",
+      "expected_category": "Environmental"
+    },
+    {
+      "message_id": "MSG005",
+      "predicted_category": "Social",
+      "confidence": 0.681,
+      "all_scores": {
+        "Social": 0.681,
+        "Governance": 0.231,
+        "Environmental": 0.088
+      },
+      "severity_rule_based": "Critical",
+      "expected_category": "Social"
+    }
+  ]
+}
