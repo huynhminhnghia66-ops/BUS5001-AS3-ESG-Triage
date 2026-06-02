@@ -85,4 +85,4 @@ The mind map successfully synthesized concepts from all three sources into a sin
 | Study Guide | High | High | Good for self-assessment; 12 well-formed questions |
 | Mind Map | High | High | Strong cross-document synthesis; Beta feature |
 
-**Key limi
+**Key limitation observed:** NotebookLM's responses are bounded entirely by the uploaded sources. When asked about topics not covered in the documents, it correctly declines to speculate, which is both a strength (accuracy) and a limitation (scope).
