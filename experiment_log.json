@@ -1,0 +1,123 @@
+{
+  "experiment": "ESG Message Triage",
+  "date": "2026",
+  "model_llm": "mistralai/Mistral-7B-Instruct-v0.3",
+  "model_baseline": "facebook/bart-large-mnli (zero-shot)",
+  "messages_tested": 5,
+  "llm_accuracy": "100%",
+  "baseline_accuracy": "100%",
+  "llm_results": [
+    {
+      "message_id": "MSG001",
+      "category": "Environmental",
+      "confidence": 0.925,
+      "severity": "Critical",
+      "urgency": "Immediate",
+      "summary": "Our factory in Vietnam has been discharging untreated wastewater into the local river for the...",
+      "recommended_action": "Escalate to environmental compliance team for immediate site inspection.",
+      "expected_category": "Environmental"
+    },
+    {
+      "message_id": "MSG002",
+      "category": "Governance",
+      "confidence": 0.386,
+      "severity": "Medium",
+      "urgency": "Routine",
+      "summary": "The board approved a $50M share buyback while cutting employee health benefits by 30%. Several...",
+      "recommended_action": "Flag to board audit committee; request executive compensation review.",
+      "expected_category": "Governance"
+    },
+    {
+      "message_id": "MSG003",
+      "category": "Social",
+      "confidence": 0.729,
+      "severity": "Critical",
+      "urgency": "Immediate",
+      "summary": "Child labor has been reported at two of our Tier-2 suppliers in Bangladesh. Local NGOs...",
+      "recommended_action": "Notify HR and legal team; initiate independent workplace investigation.",
+      "expected_category": "Social"
+    },
+    {
+      "message_id": "MSG004",
+      "category": "Environmental",
+      "confidence": 0.831,
+      "severity": "Medium",
+      "urgency": "Routine",
+      "summary": "Carbon emissions from our logistics operations increased by 18% last year, exceeding our stated net-zero...",
+      "recommended_action": "Escalate to environmental compliance team for immediate site inspection.",
+      "expected_category": "Environmental"
+    },
+    {
+      "message_id": "MSG005",
+      "category": "Social",
+      "confidence": 0.49,
+      "severity": "High",
+      "urgency": "Urgent",
+      "summary": "Three senior managers have resigned citing a toxic workplace culture. Anonymous surveys reveal 67% of...",
+      "recommended_action": "Notify HR and legal team; initiate independent workplace investigation.",
+      "expected_category": "Social"
+    }
+  ],
+  "baseline_results": [
+    {
+      "message_id": "MSG001",
+      "predicted_category": "Environmental",
+      "confidence": 0.421,
+      "all_scores": {
+        "Environmental": 0.421,
+        "Social": 0.391,
+        "Governance": 0.188
+      },
+      "severity_rule_based": "Critical",
+      "expected_category": "Environmental"
+    },
+    {
+      "message_id": "MSG002",
+      "predicted_category": "Governance",
+      "confidence": 0.586,
+      "all_scores": {
+        "Governance": 0.586,
+        "Social": 0.34,
+        "Environmental": 0.073
+      },
+      "severity_rule_based": "Medium",
+      "expected_category": "Governance"
+    },
+    {
+      "message_id": "MSG003",
+      "predicted_category": "Social",
+      "confidence": 0.589,
+      "all_scores": {
+        "Social": 0.589,
+        "Governance": 0.304,
+        "Environmental": 0.107
+      },
+      "severity_rule_based": "Critical",
+      "expected_category": "Social"
+    },
+    {
+      "message_id": "MSG004",
+      "predicted_category": "Environmental",
+      "confidence": 0.452,
+      "all_scores": {
+        "Environmental": 0.452,
+        "Social": 0.424,
+        "Governance": 0.124
+      },
+      "severity_rule_based": "Medium",
+      "expected_category": "Environmental"
+    },
+    {
+      "message_id": "MSG005",
+      "predicted_category": "Social",
+      "confidence": 0.681,
+      "all_scores": {
+        "Social": 0.681,
+        "Governance": 0.231,
+        "Environmental": 0.088
+      },
+      "severity_rule_based": "Critical",
+      "expected_category": "Social"
+    }
+  ]
+}
